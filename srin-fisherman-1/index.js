@@ -25,6 +25,12 @@ function solve(salary, dryTime, fishesPrice) {
       0,
       ...Array.from({ length: fishermanCount - 1 }).map((_, i) => i + 1),
     ];
+    // For the two for loops bellow
+    // increment each fisherman location, starting from the last fisherman
+    // e.g.
+    // [0, 1, 2] -> [0, 1, 3]
+    // [0, 1, 3] -> [0, 1, 4]
+    // revet back if current location is higher than next fisherman location or it's end of river zone
     for (let i = fishermanLocation.length - 1; i > 0; i--) {
       for (
         ;
